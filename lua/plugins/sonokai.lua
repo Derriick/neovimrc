@@ -5,6 +5,7 @@ return {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       vim.g.sonokai_style = 'default'
+      vim.g.sonokai_transparent_background = 1
       vim.g.sonokai_better_performance = 1
 
       -- Load the colorscheme here
