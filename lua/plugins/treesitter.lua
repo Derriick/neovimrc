@@ -1,4 +1,9 @@
 -- Highlight, edit, and navigate code
+
+-- Pre-requisites on Windows:
+-- > winget install -s winget Chocolatey.Chocolatey
+-- > choco install -y mingw make
+
 return {
     {
         "nvim-treesitter/nvim-treesitter",
