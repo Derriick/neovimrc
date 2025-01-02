@@ -1,9 +1,8 @@
--- Highlight, edit, and navigate code
-
+-- Highlight, edit, and navigate code.
+--
 -- Pre-requisites on Windows:
 -- > winget install -s winget Chocolatey.Chocolatey
 -- > choco install -y mingw make
-
 return {
     {
         "nvim-treesitter/nvim-treesitter",
@@ -11,7 +10,23 @@ return {
         main = "nvim-treesitter.configs", -- Sets main module to use for opts
         -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
         opts = {
-            ensure_installed = { "bash", "c", "diff", "html", "lua", "luadoc", "markdown", "markdown_inline", "query", "vim", "vimdoc" },
+            ensure_installed = {
+                "bash",
+                "c_sharp",
+                "diff",
+                "html",
+                "lua",
+                "luadoc",
+                "markdown",
+                "markdown_inline",
+                "rust",
+                "query",
+                "toml",
+                "vim",
+                "vimdoc",
+                "xml",
+                "yaml",
+            },
             -- Autoinstall languages that are not installed
             auto_install = true,
             highlight = {
@@ -29,5 +44,12 @@ return {
         --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
         --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
         --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+    },
+    {
+        "nvim-treesitter/nvim-treesitter-context",
+        opts = {
+            multiline_threshold = 4,
+            mode = "topline",
+        },
     },
 }
