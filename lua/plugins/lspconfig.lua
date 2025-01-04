@@ -231,6 +231,7 @@ return {
                         },
                     },
                 },
+                marksman = {},
             }
 
             -- Ensure the servers and tools above are installed
@@ -258,6 +259,9 @@ return {
             require("mason-tool-installer").setup({
                 ensure_installed = {
                     "stylua", -- Used to format Lua code
+                    "markdownlint-cli2",
+                    "markdown-toc",
+                    "marksman",
                 },
             })
         end,
