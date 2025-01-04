@@ -5,7 +5,7 @@
 ### Archlinux
 
 ```sh
-pacman -S ripgrep
+pacman -S --noconfirm --needed gcc make git ripgrep fd unzip neovim
 
 # Markdown preview support
 pacman -S npm
