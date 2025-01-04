@@ -258,9 +258,10 @@ return {
             -- Install other tools with Mason.
             require("mason-tool-installer").setup({
                 ensure_installed = {
-                    "stylua", -- Used to format Lua code
                     "markdownlint-cli2",
                     "markdown-toc",
+                    "prettier",
+                    "stylua", -- Used to format Lua code
                 },
             })
         end,
