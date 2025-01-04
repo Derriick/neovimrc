@@ -7,8 +7,10 @@
 ```sh
 pacman -S ripgrep
 
-# Markdown support
+# Markdown preview support
 pacman -S npm
+cd ~/.local/share/nvim/lazy/markdown-preview.nvim/
+nmp install  # or `yarn install`
 ```
 
 ### Windows
@@ -23,6 +25,8 @@ winget install sharkdp.fd
 winget install --accept-source-agreements chocolatey.chocolatey
 choco install -y wget unzip gzip mingw make
 
-# Markdown
+# Markdown preview support
 winget install OpenJS.NodeJS
+cd ~/AppData/Local/nvim-data/lazy/markdown-preview.nvim/
+npm install
 ```
