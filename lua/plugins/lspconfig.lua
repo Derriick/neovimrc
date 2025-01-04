@@ -199,6 +199,18 @@ return {
                         },
                     },
                 },
+                lua_ls = {
+                    settings = {
+                        Lua = {
+                            completion = {
+                                callSnippet = "Replace",
+                            },
+                            -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
+                            -- diagnostics = { disable = { 'missing-fields' } },
+                        },
+                    },
+                },
+                marksman = {},
                 rust_analyzer = {
                     cargo = {
                         allFeatures = true,
@@ -220,18 +232,6 @@ return {
                         },
                     },
                 },
-                lua_ls = {
-                    settings = {
-                        Lua = {
-                            completion = {
-                                callSnippet = "Replace",
-                            },
-                            -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-                            -- diagnostics = { disable = { 'missing-fields' } },
-                        },
-                    },
-                },
-                marksman = {},
             }
 
             -- Ensure the servers and tools above are installed
@@ -242,7 +242,7 @@ return {
             --  You can press `g?` for help in this menu.
             require("mason").setup()
             require("mason-lspconfig").setup({
-                ensure_installed = servers,
+                ensure_installed = vim.tbl_keys(servers),
                 automatic_installation = true,
                 handlers = {
                     function(server_name)
@@ -261,7 +261,6 @@ return {
                     "stylua", -- Used to format Lua code
                     "markdownlint-cli2",
                     "markdown-toc",
-                    "marksman",
                 },
             })
         end,
