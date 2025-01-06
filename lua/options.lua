@@ -77,6 +77,8 @@ vim.opt.smartindent = true
 --vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 --vim.opt.undofile = true
 
-vim.opt.termguicolors = true
+if vim.fn.has("termguicolors") then
+    vim.opt.termguicolors = true
+end
 
 vim.opt.exrc = true
